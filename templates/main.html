@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color picker</title>
+    <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
+    <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+<div class="main-container">
+    <h1>Color picker</h1>
+    <form class="color-picker" action="{{ url_for('main') }}" method="GET">
+        <div class="rgb-picker">
+            <label for="red">Red</label>
+            <input type="number" id="red">
+        </div>
+        <div class="rgb-picker">
+            <label for="blue">Green</label>
+            <input type="number" id="green">
+        </div>
+        <div class="rgb-picker">
+            <label for="green">Blue</label>
+            <input type="number" id="blue">
+        </div>
+        <div class="rgb-picker">
+            <label for="alpha">Alpha</label>
+            <input type="number" id="alpha">
+        </div>
+        <button type="submit" hidden>Buttonka</button>
+    </form>
+    <p class="hex-value">HEX value: #......</p>
+    <p>Binary values:</p>
+    <ul>
+        <li class="binary-value" id="red">Red: ...</li>
+        <li class="binary-value" id="green">Green: ...</li>
+        <li class="binary-value" id="blue">Blue: ...</li>
+    </ul>
+</div>
+</body>
+</html>
